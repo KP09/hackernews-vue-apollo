@@ -1,11 +1,8 @@
-// 1
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import 'tachyons'
 import Vue from 'vue'
-
-// 2
 import VueApollo from 'vue-apollo'
 
 import App from './App'
