@@ -8,6 +8,8 @@ import VueApollo from 'vue-apollo'
 import App from './App'
 import router from './router'
 
+import { GC_USER_ID } from './constants/settings'
+
 Vue.config.productionTip = false
 
 // 3
@@ -34,11 +36,16 @@ const apolloProvider = new VueApollo({
   }
 })
 
+let userId = localStorage.getItem(GC_USER_ID)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   // 7
   provide: apolloProvider.provide(),
   router,
+  data: {
+    userId
+  },
   render: h => h(App)
 })
