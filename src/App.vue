@@ -1,27 +1,32 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <div class="center w85">
-      <app-header></app-header>
+      <app-navigation></app-navigation>
       <div class='ph3 pv1 background-gray'>
         <router-view></router-view>
       </div>
+      <app-footer></app-footer>
     </div>
-  </div>
+  </v-app>
 </template>
 
 <script>
   import AppHeader from './components/AppHeader'
+  import AppNavigation from './components/AppNavigation'
+  import AppFooter from './components/AppFooter'
 
   export default {
     name: 'app',
     components: {
-      AppHeader
+      AppHeader,
+      AppNavigation,
+      AppFooter
     }
   }
 </script>
 
 <style>
-  body {
+  /* body {
     margin: 0;
     padding: 0;
     font-family: Verdana, Geneva, sans-serif;
@@ -63,5 +68,5 @@
     border-color: buttonface;
     cursor: pointer;
     max-width: 250px;
-  }
+  } */
 </style>

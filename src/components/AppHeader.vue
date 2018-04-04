@@ -2,7 +2,8 @@
   <div class="flex pa1 justify-between nowrap orange">
     <div class="flex flex-fixed black">
       <div class="fw7 mr1">Hacker News</div>
-      <router-link to="/" class="ml1 no-underline black">links</router-link>
+      <router-link to="/home" class="ml1 no-underline black">Home</router-link>
+      <router-link to="/links" class="ml1 no-underline black">links</router-link>
       <div v-if="userId">
         <router-link to="/create" class="ml1 no-underline black">| submit</router-link>
       </div>
